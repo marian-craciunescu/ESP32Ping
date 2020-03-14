@@ -169,10 +169,7 @@ static void ping_recv(int s) {
             gettimeofday(&end, NULL);
 
             /// Get from IP address
-            ip4_addr_t fromaddr;
-            inet_addr_to_ip4addr(&fromaddr, &from.sin_addr);
-
-            strcpy(ipa, inet_ntoa(fromaddr));
+            strcpy(ipa, inet_ntoa(from.sin_addr));
 
             // Get echo
             iphdr = (struct ip_hdr *)buf;
