@@ -76,7 +76,7 @@ void PingClass::_ping_recv_cb(void *opt, void *resp) {
     // Error or success?
     _errors = ping_resp->timeout_count;
     _success = ping_resp->total_count - ping_resp->timeout_count;
-    _avg_time += ping_resp->resp_time;
+    _avg_time = ping_resp->resp_time;
     
 
     // Some debug info
