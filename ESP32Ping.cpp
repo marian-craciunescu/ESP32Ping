@@ -64,7 +64,7 @@ bool PingClass::ping(const char *host, byte count) {
     return false;
 }
 
-int PingClass::averageTime() {
+float PingClass::averageTime() {
     return _avg_time;
 }
 
@@ -96,7 +96,7 @@ void PingClass::_ping_recv_cb(void *opt, void *resp) {
     );
 
     // Is it time to end?
-    DEBUG_PING("Avg resp time %d ms\n", _avg_time);
+    DEBUG_PING("Avg resp time %f ms\n", _avg_time);
     
     // Done, return to main functiom
     esp_schedule();
@@ -110,6 +110,6 @@ void PingClass::_ping_recv_cb(void *opt, void *resp) {
 byte PingClass::_expected_count = 0;
 byte PingClass::_errors = 0;
 byte PingClass::_success = 0;
-int  PingClass::_avg_time = 0;
+float  PingClass::_avg_time = 0;
 
 PingClass Ping;
