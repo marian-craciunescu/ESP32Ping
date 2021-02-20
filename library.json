@@ -1,0 +1,26 @@
+{
+  "name": "ESP32Ping",
+  "version": "1.7",
+  "description": "With this library an ESP32 can ping a remote machine and know if it's reachable. It provide some basic measurements on ping messages (avg response time).",
+  "keywords": "ping, web, http",
+  "authors": [
+    {
+      "name": "Marian Craciunescu",
+      "maintainer": true
+    },
+    {
+      "name": "Daniele Colanardi",
+      "maintainer": false
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marian-craciunescu/ESP32Ping.git"
+  },
+  "exclude": [
+    ".github"
+  ],
+  "platforms": [
+    "espressif32"
+  ]
+}
