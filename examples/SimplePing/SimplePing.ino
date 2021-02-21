@@ -6,7 +6,7 @@
 #include <WiFi.h>
 #include <ESP32Ping.h>
 
-const char* ssid     = "ssid";
+char* ssid     = "ssid";
 const char* password = "passphrase";
 
 const IPAddress remote_ip(192, 168, 0, 1);
